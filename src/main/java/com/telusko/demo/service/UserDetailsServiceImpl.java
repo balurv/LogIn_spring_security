@@ -1,11 +1,6 @@
 package com.telusko.demo.service;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -30,11 +25,11 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 		throw new UsernameNotFoundException(username);
 	}
 
-	private List<GrantedAuthority> getAuthorities(User user) {
-		List<GrantedAuthority> authorities = new ArrayList<>();
-		// Add role-based authorities for the user
-		authorities.add(new SimpleGrantedAuthority(user.getRole()));
-		return authorities;
-	}
+//	private List<GrantedAuthority> getAuthorities(User user) {
+//		List<GrantedAuthority> authorities = new ArrayList<>();
+//		// Add role-based authorities for the user
+//		authorities.add(new SimpleGrantedAuthority(user.getRole()));
+//		return authorities;
+//	}
 
 }
